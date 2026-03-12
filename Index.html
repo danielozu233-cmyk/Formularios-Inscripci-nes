@@ -502,7 +502,6 @@
             selectFac.appendChild(opt);
         });
 
-        // Evento → cambia facultad
         selectFac.addEventListener("change", () => {
             selectCar.innerHTML = '<option value="" disabled selected hidden>- Seleccionar -</option>';
             const fac = selectFac.value;
@@ -566,7 +565,6 @@ document.getElementById("miFormulario").addEventListener("submit", async (e) => 
         await addDoc(collection(db, "formularios"), data);
         await emailjs.send("service_bwc1vzx", "template_e2qrgt6", data);
 
-        // Éxito
         document.getElementById("overlay-cargando").style.display = "none";
         document.getElementById("overlay-exito").style.display = "flex";
         form.reset();
@@ -591,3 +589,4 @@ document.getElementById("miFormulario").addEventListener("submit", async (e) => 
 </body>
 
 </html>
+
